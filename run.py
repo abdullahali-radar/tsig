@@ -20,6 +20,7 @@ def openJSON(file):
 
 @main.route("/")
 def helloWorld():
+  about=openJSON(fileAbout)
   return Response(response=json.dumps(about),
                     status=200,
                     mimetype="application/json")
