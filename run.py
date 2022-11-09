@@ -7,7 +7,7 @@ import json
 main = Flask(__name__)
 #run_with_ngrok(main)
 
-fileAbout='/aboutProject.json'
+fileAbout='./aboutProject.json'
 f=open(fileAbout)
 about=json.load(f)
 f.close()
