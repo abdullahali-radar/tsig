@@ -5,11 +5,13 @@ import json
 
 main = Flask(__name__)
 
+fileAbout='/content/tsig/aboutProject.json'
+f=open(fileAbout)
+about=json.load(f)
+
 @main.route("/")
 def helloWorld():
-  fileAbout='tsig/aboutProject.json'
-  f=open(fileAbout)
-  about=json.load(f)
+  
   f.close()
   return Response(response=json.dumps(about),
                     status=200,
