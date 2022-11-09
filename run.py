@@ -14,7 +14,7 @@ fileMSLP='./mslp_clip.geojson'
 fileTP='./tp_clip_more0.geojson'
 
 def openJSON(file):
-  with open(fileAbout) as f:
+  with open(file) as f:
     content=json.load(f)
   return content
 
@@ -29,6 +29,27 @@ def helloWorld():
 def displayKI():
   ki=openJSON(fileKI)
   return Response(response=json.dumps(ki),
+                    status=200,
+                    mimetype="application/json")
+
+@main.route("/rh")
+def displayRH():
+  rh=openJSON(fileRH)
+  return Response(response=json.dumps(rh),
+                    status=200,
+                    mimetype="application/json")
+
+@main.route("/mslp")
+def displayMSLP():
+  mslp=openJSON(fileMSLP)
+  return Response(response=json.dumps(mslp),
+                    status=200,
+                    mimetype="application/json")
+
+@main.route("/tp")
+def displayTP():
+  tp=openJSON(fileTP)
+  return Response(response=json.dumps(tp),
                     status=200,
                     mimetype="application/json")
 
