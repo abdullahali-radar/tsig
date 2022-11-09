@@ -65,11 +65,11 @@ def returnQuery():
   
   if operator=='lebihdari':
     dataquery = [p for p in features if p["properties"]["value"] > int(nilai)]
-  if operator=='kurangdari':
+  elif operator=='kurangdari':
     dataquery = [p for p in features if p["properties"]["value"] < int(nilai)]
-  if operator=='samadengan':
+  elif operator=='samadengan':
     dataquery = [p for p in features if p["properties"]["value"] == int(nilai)]
-
+  
   return Response(response=json.dumps(dataquery),
                     status=200,
                     mimetype="application/json")
