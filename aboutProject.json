@@ -1,0 +1,16 @@
+{
+  "about": "API untuk get data MSLP, KI, RH, dan TP Training Signature Day 3", 
+  "authors": [
+    {
+      "name": "Agita Vivi", 
+      "division": "PPC"
+    },{
+      "name": "Irsal", 
+      "division": "PPC"
+    }
+    ,{
+      "name": "Ali", 
+      "division": "PCR"
+      }
+  ]
+}
