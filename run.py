@@ -8,11 +8,10 @@ main = Flask(__name__)
 fileAbout='/content/tsig/aboutProject.json'
 f=open(fileAbout)
 about=json.load(f)
+f.close()
 
 @main.route("/")
 def helloWorld():
-  
-  f.close()
   return Response(response=json.dumps(about),
                     status=200,
                     mimetype="application/json")
