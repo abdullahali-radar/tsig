@@ -59,7 +59,7 @@ def returnQuery():
   nilai = request.args.get('nilai')
   operator = request.args.get('operator')
   
-  fileOpen=f"{parameter}_jateng.json"
+  fileOpen=f"./{parameter}_jateng.json"
   variabel=openJSON(fileOpen)
   features=variabel["features"]
   
