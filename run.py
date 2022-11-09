@@ -69,7 +69,8 @@ def returnQuery():
     dataquery = [p for p in features if p["properties"]["value"] < int(nilai)]
   elif operator=='samadengan':
     dataquery = [p for p in features if p["properties"]["value"] == int(nilai)]
-  
+
+    
   return Response(response=json.dumps(dataquery),
                     status=200,
                     mimetype="application/json")
